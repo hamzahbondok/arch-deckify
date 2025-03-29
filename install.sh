@@ -195,6 +195,3 @@ else
     sudo touch /etc/systemd/logind.conf.d/logind.conf
     echo "HandlePowerKey=sleep" | sudo tee -a /etc/systemd/logind.conf.d/logind.conf
     echo "KillUserProcesses=True" | sudo tee -a /etc/systemd/logind.conf.d/logind.conf
-    
-
-
