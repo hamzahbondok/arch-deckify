@@ -193,7 +193,8 @@ if [ -f /etc/systemd/logind.conf.d/logind.conf ]; then
 else
     sudo mkdir /etc/systemd/logind.conf.d
     sudo touch /etc/systemd/logind.conf.d/logind.conf
-    sudo sed -i "HandlePowerKey=sleep" "/etc/systemd/logind.conf.d/logind.conf"
+    echo "HandlePowerKey=sleep" | sudo tee -a /etc/systemd/logind.conf.d/logind.conf
+    echo "KillUserProcesses=True" | sudo tee -a /etc/systemd/logind.conf.d/logind.conf
     
 
 
